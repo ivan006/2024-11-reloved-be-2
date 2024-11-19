@@ -29,6 +29,13 @@ Route::middleware('auth:sanctum')->group(function () {
     //Route::apiResource('posts', \App\Http\Controllers\Api\PostController::class);
 
 
+    Route::apiResource('brands', \App\Http\Controllers\Api\BrandController::class);
+
+    Route::apiResource('categories', \App\Http\Controllers\Api\CategoryController::class);
+
+    Route::apiResource('genders', \App\Http\Controllers\Api\GenderController::class);
+
+    Route::apiResource('products', \App\Http\Controllers\Api\ProductController::class);
 
 });
 
@@ -42,3 +49,16 @@ Route::middleware('auth:sanctum')->group(function () {
 // API routes for users
 Route::get('users', [\App\Http\Controllers\Api\UserController::class, 'index'])->name('users.index');
 Route::get('users/{user}', [\App\Http\Controllers\Api\UserController::class, 'show'])->name('users.show');
+
+
+Route::get('brands', [\App\Http\Controllers\Api\BrandController::class, 'index'])->name('brands.index');
+Route::get('brands/{brand}', [\App\Http\Controllers\Api\BrandController::class, 'index'])->name('brands.show');
+
+Route::get('categories', [\App\Http\Controllers\Api\CategoryController::class, 'index'])->name('categories.index');
+Route::get('categories/{category}', [\App\Http\Controllers\Api\CategoryController::class, 'index'])->name('categories.show');
+
+Route::get('genders', [\App\Http\Controllers\Api\GenderController::class, 'index'])->name('genders.index');
+Route::get('genders/{gender}', [\App\Http\Controllers\Api\GenderController::class, 'index'])->name('genders.show');
+
+Route::get('products', [\App\Http\Controllers\Api\ProductController::class, 'index'])->name('products.index');
+Route::get('products/{product}', [\App\Http\Controllers\Api\ProductController::class, 'index'])->name('products.show');

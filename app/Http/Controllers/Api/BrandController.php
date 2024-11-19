@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use WizwebBe\OrmApi;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class BrandController extends Controller
 {
-    protected $itemNameSingular = "User";
+    protected $itemNameSingular = "Brand";
     protected $model;
 
     public function __construct()
     {
-        $this->model = new User();
+        $this->model = new Brand();
     }
 
     /**

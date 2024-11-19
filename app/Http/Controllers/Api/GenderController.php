@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use WizwebBe\OrmApi;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Gender;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class GenderController extends Controller
 {
-    protected $itemNameSingular = "User";
+    protected $itemNameSingular = "Gender";
     protected $model;
 
     public function __construct()
     {
-        $this->model = new User();
+        $this->model = new Gender();
     }
 
     /**
