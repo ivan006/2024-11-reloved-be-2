@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('genders', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name')->unique(); // Gender names like "Men", "Women", "Unisex"
             $table->timestamps();
         });

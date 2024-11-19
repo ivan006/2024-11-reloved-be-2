@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('brands', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name')->unique(); // Each brand name must be unique
             $table->timestamps();
         });
