@@ -29,14 +29,14 @@ class Product extends OrmApiBaseModel
     public function spouseRelationships()
     {
         return [
-            
+
         ];
     }
 
     public function childRelationships()
     {
         return [
-            
+
         ];
     }
 
@@ -47,7 +47,7 @@ class Product extends OrmApiBaseModel
             'description' => 'nullable',
             'price' => 'sometimes:required',
             'image' => 'nullable',
-            'purchase_date' => 'sometimes:required',
+            'purchase_date' => 'nullable',
             'created_at' => 'nullable',
             'updated_at' => 'nullable',
             'brand_id' => 'sometimes:required',
@@ -98,7 +98,7 @@ class Product extends OrmApiBaseModel
         return $this->belongsTo(User::class, 'buyer_id');
     }
 
-    
 
-    
+
+
 }
